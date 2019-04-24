@@ -9,8 +9,10 @@ class DebugServiceProvider extends ServiceProvider
 {
     public static function boot(): void
     {
-        $whoops = new \Whoops\Run();
-        $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
-        $whoops->register();
+    	if (getenv('APP_ENV') == 'dev') {
+	        $whoops = new \Whoops\Run();
+	        $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
+	        $whoops->register();
+    	}
     }
 }

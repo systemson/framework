@@ -8,7 +8,9 @@ class DotenvServiceProvider extends ServiceProvider
 {
     public static function boot(): void
     {
-        $dotenv = Dotenv::create(APP_DIR);
-        $dotenv->load();
+    	if (file_exists(APP_DIR . '.env')) {
+        	$dotenv = Dotenv::create(APP_DIR);
+        	$dotenv->load();
+    	}
     }
 }
