@@ -22,11 +22,23 @@
         }
     },
     "require": {
-        "php": ">=7.2.0"
+        "php": ">=7.2.0",
+        "amber/cache": "^1.0@beta",
+        "amber/common": "dev-master",
+        "amber/container": "^1.0.2",
+        "amber/sketch": "dev-master",
+        "monolog/monolog": "^1.24",
+        "psr/http-factory": "^1.0",
+        "psr/http-server-middleware": "^1.0",
+        "sunrise/stream": "^1.0",
+        "symfony/console": "^4.2",
+        "symfony/http-foundation": "^4.2",
+        "symfony/routing": "^4.2",
+        "vlucas/phpdotenv": "^3.3"
     },
     "require-dev": {
+        "filp/whoops": "^2.3",
         "php-coveralls/php-coveralls": "^2.1",
-        "phpdocumentor/phpdocumentor": "dev-master",
         "phpunit/phpunit": "^8.0",
         "squizlabs/php_codesniffer": "^3.3"
     },
